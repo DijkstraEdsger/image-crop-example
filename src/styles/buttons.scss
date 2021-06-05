@@ -1,0 +1,102 @@
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2d2ce9;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  box-sizing: border-box;
+  min-width: 220px;
+  min-height: 45px;
+  padding: 11px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+
+  transition: border-color 0.3s ease, background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background: #1514c5;
+    border-color: #1514c5;
+  }
+
+  &:disabled {
+    background: rgba(45, 44, 233, 0.45);
+    border: rgba(45, 44, 233, 0.45);
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.Primary {
+    border-color: #2d2ce9 !important;
+    background: #2d2ce9 !important;
+    color: white !important;
+  }
+
+  &.Third {
+    min-width: 134px;
+    height: 34px;
+    object-fit: contain;
+    border-radius: 25px;
+    border: solid 2px #686868;
+    background-color: #ffffff;
+    padding: 0 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #686868;
+    min-height: unset;
+
+    &:hover {
+      background: white;
+      border-color: #686868;
+    }
+  }
+
+  &.Small {
+    min-width: 105px;
+    min-height: 34px;
+    width: 106px;
+    height: 34px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+  }
+
+  &.WhiteBorder {
+    border: 2px solid white;
+  }
+
+  &.Secondary {
+    border: 2px solid #2d2ce9;
+    color: #2d2ce9;
+    background: white;
+
+    &:hover {
+      border-color: #1514c5;
+      color: #1514c5;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Button {
+    min-width: 190px;
+  }
+}

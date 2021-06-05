@@ -1,0 +1,197 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.UploadImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px auto 32px;
+
+  .ImageContainer {
+    position: relative;
+    width: 130px;
+    height: 130px;
+
+    .NoImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #cbcbcb;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 130px;
+      width: 130px;
+
+      .IconBuilding {
+        height: 70.4px;
+      }
+    }
+
+    .Image {
+      // position: absolute;
+      border-radius: 50%;
+      // top: 0;
+      // left: 0;
+      height: 130px;
+      width: 130px;
+    }
+
+    .LoadEditIconWrapper {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: #2d2ce9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      span,
+      i {
+        color: #fff;
+        font-size: 17.8px;
+      }
+    }
+  }
+
+  .SubText1 {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin-top: 24px;
+  }
+
+  .SubText2 {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #686868;
+    margin-top: 8px;
+  }
+
+  .Input {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+.ErrorLimitWrapperCreateProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 374px;
+
+  .ErrorLimitHeadTitle {
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2d2ce9;
+    margin: 0 0 62px;
+    max-width: 360px;
+  }
+
+  .Sad {
+    transform: rotate(90deg);
+    font-family: Roboto;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2d2ce9;
+    height: 91.8px;
+    font-size: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+  }
+
+  .ErrorLimitSubText {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #434343;
+    margin: 65px 0 32px;
+  }
+
+  .ButtonsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 32px;
+
+    .Button:nth-child(1) {
+      min-width: 190px;
+    }
+
+    .Button:nth-child(2) {
+      min-width: 190px;
+    }
+  }
+}

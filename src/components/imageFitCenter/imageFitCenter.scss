@@ -1,0 +1,219 @@
+.ImageFitCenterWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .HeadTitle {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2d2ce9;
+    margin: 0 0 24px;
+  }
+
+  .ImageContainer {
+    height: 162px;
+    width: 162px;
+    position: relative;
+
+    // img {
+    //   height: 100%;
+    //   width: 100%;
+    // }
+  }
+
+  .SubText {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #434343;
+    margin: 24px 0 41px;
+    height: 19px;
+  }
+
+  .InputImage {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .slidecontainer {
+    width: 234px;
+    display: flex;
+    align-items: center;
+
+    .slider {
+      -webkit-appearance: none; /* Override default CSS styles */
+      appearance: none;
+      width: 100%;
+      height: 3px;
+      background: #cbcbcb;
+      outline: none;
+      opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+      -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+      transition: opacity 0.2s;
+      margin: 0;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      width: 22px; /* Set a specific slider handle width */
+      height: 22px; /* Slider handle height */
+      background: #fff; /* Green background */
+      cursor: pointer; /* Cursor on hover */
+      border: solid 1px #1515c5;
+      border-radius: 50%;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 22px; /* Set a specific slider handle width */
+      height: 22px; /* Slider handle height */
+      background: #fff; /* Green background */
+      cursor: pointer; /* Cursor on hover */
+      border: solid 1px #1515c5;
+      border-radius: 50%;
+    }
+  }
+
+  .ButtonsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 42px;
+    column-gap: 32px;
+    flex-direction: column-reverse;
+    width: 100%;
+    row-gap: 24px;
+
+    .Button:nth-child(1) {
+      height: 34px;
+      min-height: 34px;
+      box-sizing: border-box;
+      width: 100%;
+      min-width: 100%;
+      height: 45px;
+    }
+
+    .Button:nth-child(2) {
+      height: 34px;
+      min-height: 34px;
+      box-sizing: border-box;
+      width: 100%;
+      min-width: 100%;
+      height: 45px;
+    }
+  }
+}
+
+.ErrorLimitWrapperCreateProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 374px;
+
+  .ErrorLimitHeadTitle {
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2d2ce9;
+    margin: 0 0 62px;
+    max-width: 360px;
+  }
+
+  .Sad {
+    transform: rotate(90deg);
+    font-family: Roboto;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2d2ce9;
+    height: 91.8px;
+    font-size: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+  }
+
+  .ErrorLimitSubText {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #434343;
+    margin: 65px 0 32px;
+  }
+
+  .ButtonsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 32px;
+
+    .Button:nth-child(1) {
+      min-width: 190px;
+    }
+
+    .Button:nth-child(2) {
+      min-width: 190px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .ImageFitCenterWrapper {
+    width: 465px;
+    // height: 380px;
+
+    .HeadTitle {
+      font-size: 26px;
+      height: 34px;
+    }
+
+    .ButtonsWrapper {
+      width: 100%;
+      padding: 0 38px 0;
+      box-sizing: border-box;
+      flex-direction: row;
+
+      .Button:nth-child(1) {
+        min-width: 190px;
+        height: 45px;
+      }
+
+      .Button:nth-child(2) {
+        min-width: 190px;
+        height: 45px;
+      }
+    }
+  }
+}

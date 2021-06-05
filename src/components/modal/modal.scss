@@ -1,0 +1,88 @@
+.ModalWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .4);
+  z-index: 10000;
+  animation: appearIn;
+  animation-duration: 100ms;
+
+  .ModalContainer {
+    width: 575px;
+    border-radius: 8px;
+    box-shadow: 0 2px 11px 0 rgba(45, 44, 233, 0.14);
+    background-color: #ffffff;
+    padding: 40px 55px 46px;
+    box-sizing: border-box;
+    position: relative;
+    animation: zoomIn;
+    animation-duration: 300ms;
+    max-width: 100vw;
+
+    .Close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .Title {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      color: #2d2ce9;
+      margin-bottom: 40px;
+    }
+
+    .Content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+      text-align: center;
+      color: black;
+      margin-bottom: 40px;
+
+      &.Warning {
+        color: red;
+      }
+      .Img {
+        margin-bottom: 20px;
+      }
+    }
+
+    .Buttons {
+      display: flex;
+      justify-content: center;
+
+      .Button {
+        width: 160px;
+        margin-right: 20px;
+        min-width: unset;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ModalWrapper {
+    .ModalContainer {
+      width: calc(100vw - 20px) !important;
+      padding: 40px 41.4px 46px;
+
+      .Title {
+        font-size: 16px;
+      }
+    }
+  }
+
+}
