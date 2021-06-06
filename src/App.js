@@ -27,7 +27,7 @@ const Upload = ({
   }, [changeImage]);
 
   const onLoadFileHandler = () => {
-    console.log("load 6");
+    console.log("load 7");
     if (preview) {
       onEdit();
     } else {
