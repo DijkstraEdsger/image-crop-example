@@ -60,6 +60,10 @@
       min-height: 34px;
       box-sizing: border-box;
     }
+
+    .P-0 {
+      padding: 0 !important;
+    }
   }
 }
 
@@ -92,6 +96,10 @@
       .Button:nth-child(2) {
         min-width: 190px;
         height: 45px;
+      }
+
+      .P-0 {
+        padding: 11px 28px !important;
       }
     }
   }

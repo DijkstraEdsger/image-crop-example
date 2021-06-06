@@ -126,7 +126,7 @@ const ImageFitCenter = (props) => {
           name="zoom"
         />
       </div>
-      <div className="ButtonsWrapper">
+      <div className="ButtonsImageFitCenterWrapper">
         <button className="Button Secondary" onClick={onLoadFileHandler}>
           Change
         </button>

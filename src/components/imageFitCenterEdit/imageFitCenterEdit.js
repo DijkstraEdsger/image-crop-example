@@ -30,7 +30,7 @@ const ImageFitCenterEdit = (props) => {
           ? "Make sure it’s centred!"
           : "You can add a JPEG or PNG up to 5mb."}
       </span>
-      <div className="ButtonsWrapper">
+      <div className="ButtonsImageFitCenterEditWrapper">
         <button
           className="Button Secondary RedButton"
           onClick={onRemoveImageHandler}

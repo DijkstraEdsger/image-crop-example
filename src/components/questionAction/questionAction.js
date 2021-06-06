@@ -12,10 +12,10 @@ const QuestionAction = (props) => {
       <span className="TextQuestion">{props.question}</span>
 
       <div className="ButtonsWrapper">
-        <button className="Button Secondary" onClick={props.onCancel}>
+        <button className="Button Secondary P-0" onClick={props.onCancel}>
           Cancel
         </button>
-        <button className="Button" onClick={props.onOk}>
+        <button className="Button P-0" onClick={props.onOk}>
           Ok
         </button>
       </div>
