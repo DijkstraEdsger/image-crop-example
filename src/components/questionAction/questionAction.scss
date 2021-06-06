@@ -37,13 +37,13 @@
     color: #000000;
   }
 
-  .ButtonsWrapper {
+  .ButtonsQuestionActionWrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
-    column-gap: 24px;
+    width: 100%;
 
     .Button:nth-child(1) {
       min-width: 106px;
@@ -83,7 +83,7 @@
       margin-bottom: 24px;
     }
 
-    .ButtonsWrapper {
+    .ButtonsQuestionActionWrapper {
       width: 100%;
       padding: 0 38px 0;
       box-sizing: border-box;

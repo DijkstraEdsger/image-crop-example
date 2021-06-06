@@ -11,7 +11,7 @@ const QuestionAction = (props) => {
 
       <span className="TextQuestion">{props.question}</span>
 
-      <div className="ButtonsWrapper">
+      <div className="ButtonsQuestionActionWrapper">
         <button className="Button Secondary P-0" onClick={props.onCancel}>
           Cancel
         </button>
