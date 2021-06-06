@@ -27,7 +27,7 @@ const Upload = ({
   }, [changeImage]);
 
   const onLoadFileHandler = () => {
-    console.log("load 7");
+    console.log("load 8");
     if (preview) {
       onEdit();
     } else {
@@ -248,7 +248,7 @@ function App() {
               You can add JPEG and PNG up to 5mb.
             </span>
 
-            <div className="ButtonsWrapper">
+            <div className="ButtonsErrorLimitCreateProfileWrapper">
               <button
                 className="Button Secondary"
                 onClick={onChangeAfterErrorLimitHandler}

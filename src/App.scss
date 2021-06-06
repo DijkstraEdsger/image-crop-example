@@ -179,12 +179,14 @@
     margin: 65px 0 32px;
   }
 
-  .ButtonsWrapper {
+  .ButtonsErrorLimitCreateProfileWrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    column-gap: 32px;
+    width: 100%;
+    padding: 0 38px 0;
+    box-sizing: border-box;
 
     .Button:nth-child(1) {
       min-width: 190px;
@@ -192,6 +194,29 @@
 
     .Button:nth-child(2) {
       min-width: 190px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .ErrorLimitWrapperCreateProfile {
+    height: fit-content !important;
+
+    .ButtonsErrorLimitCreateProfileWrapper {
+      flex-direction: column-reverse;
+      width: 100%;
+      padding: 0;      
+  
+      .Button:nth-child(1) {
+        min-width: 190px;
+        width: 100%;
+        margin-top: 24px;
+      }
+  
+      .Button:nth-child(2) {
+        min-width: 190px;
+        width: 100%;
+      }
     }
   }
 }
