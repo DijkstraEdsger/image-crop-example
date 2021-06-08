@@ -22,17 +22,19 @@ const Upload = ({
   const inputEl = useRef(null);
 
   useEffect(() => {
-    // if (changeImage) {
-    //   // let inpEl = document.getElementsByClassName("inputLoadLogoCreateProfile")[0];
-    //   // inpEl.click();
-    //   inputEl.current.click();
-    // }
-    console.log("changeImage", changeImage);
-    inputEl.current.click();
+    if (changeImage) {
+      // let inpEl = document.getElementsByClassName("inputLoadLogoCreateProfile")[0];
+      // inpEl.click();
+      // inputEl.current.click();
+      setTimeout(() => {
+        inputEl.current.click();
+      }, 3000);
+    }
+    console.log("changeImage", changeImage);        
   }, [changeImage]);
 
   const onLoadFileHandler = () => {
-    console.log("load 20");
+    console.log("load 21");
     if (preview) {
       onEdit();
       setChangeImage(false);
