@@ -25,16 +25,18 @@ const Upload = ({
     if (changeImage) {
       // let inpEl = document.getElementsByClassName("inputLoadLogoCreateProfile")[0];
       // inpEl.click();
-      // inputEl.current.click();
-      setTimeout(() => {
-        inputEl.current.click();
-      }, 3000);
+      loadFile();
     }
-    console.log("changeImage", changeImage);        
+    // console.log("changeImage", changeImage);        
   }, [changeImage]);
 
+  const loadFile = () => {    
+    inputEl.current.click();
+    console.log("loadFile");
+  }
+
   const onLoadFileHandler = () => {
-    console.log("load 21");
+    console.log("load 22");
     if (preview) {
       onEdit();
       setChangeImage(false);
