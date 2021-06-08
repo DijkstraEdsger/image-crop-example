@@ -171,19 +171,20 @@
     margin: 65px 0 32px;
   }
 
-  .ButtonsWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 32px;
+  .ButtonsErrorLimitCreateProfileWrapper {
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 0;      
 
     .Button:nth-child(1) {
       min-width: 190px;
+      width: 100%;
+      margin-top: 24px;
     }
 
     .Button:nth-child(2) {
       min-width: 190px;
+      width: 100%;
     }
   }
 }

@@ -155,7 +155,7 @@ const ImageFitCenter = (props) => {
               You can add JPEG and PNG up to 5mb.
             </span>
 
-            <div className="ButtonsWrapper">
+            <div className="ButtonsErrorLimitCreateProfileWrapper">
               <button
                 className="Button Secondary"
                 onClick={onChangeAfterErrorLimitHandler}

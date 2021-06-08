@@ -5,7 +5,6 @@ import QuestionAction from "../questionAction/questionAction";
 
 const ImageFitCenterEdit = (props) => {
   const [removeImage, setRemoveImage] = useState(false);
-  const [companyLogo, setCompanyLogo] = useState();
   const inputEl = useRef(null);
 
   const onRemoveImageHandler = () => {
@@ -20,16 +19,6 @@ const ImageFitCenterEdit = (props) => {
     setRemoveImage(false);
     props.onRemove();
   };
-
-  // const handleCompanyLogo = (e) => {
-  //   if (e.target.files && e.target.files[0]) {
-  //     // check if the size is less than 5mb
-  //     if ((e.target.files[0].size / 1024 / 1024).toFixed(0) < 5) {
-  //       setCompanyLogo(e.target.files[0]);
-  //       props.onSelectFile(e.target.files[0]);
-  //     }
-  //   }
-  // };
 
   const onLoadFileHandler = () => {
     inputEl.current.click();

@@ -15,41 +15,20 @@ const Upload = ({
   preview,
   canChange,
   disabled = false,
-  changeImage = false,
   onEdit,
-  setChangeImage = () => {}
 }) => {
-  const inputEl = useRef(null);
-
-  useEffect(() => {
-    if (changeImage) {
-      // let inpEl = document.getElementsByClassName("inputLoadLogoCreateProfile")[0];
-      const event = new MouseEvent('click', {
-        view: window,
-        bubbles: true,
-        cancelable: true
-      });
-      let inpEl = document.getElementById("inputLoadLogoCreateProfile");
-      inpEl.dispatchEvent(event);
-      // inpEl.click();
-      // inputEl.current.click();
-    }
-    // console.log("changeImage", changeImage);        
-  }, [changeImage]);
+  const inputEl = useRef(null);  
 
   const onLoadFileHandler = () => {
-    console.log("load 26");
+    console.log("load 28");
     if (preview) {
       onEdit();
-      setChangeImage(false);
     } else {
       inputEl.current.click();
     }
 
     if (inputEl.current.files && inputEl.current.files[0]) {
-      // console.log("inputEl.current.files[0]", inputEl.current.files[0]);
       inputEl.current.value = "";  
-      // console.log("inputEl.current.files", inputEl.current.files);
     }   
   };
 
@@ -94,7 +73,6 @@ const Upload = ({
           onChange={onChange}
           disabled={disabled}
           accept="image/*,image/x-png,image/gif,image/jpeg,image/jpg"
-          className="inputLoadLogoCreateProfile"
         />
       )}
     </div>
@@ -112,7 +90,6 @@ function App() {
   const [fitCenterLogo, setFitCenterLogo] = useState(false);
   const [fitCenterLogoEdit, setFitCenterLogoEdit] = useState(false);
   const [errorLimit, setErrorLimit] = useState(false);
-  const [changeImage, setChangeImage] = useState(false);
   const [companyLogoPreview, setCompanyLogoPreview] = useState(
     companyLogo.name
   );
@@ -131,7 +108,6 @@ function App() {
       }
 
       setErrorLimit(true);
-      setChangeImage(false);
     }
 
     return setCompanyLogo({
@@ -141,7 +117,6 @@ function App() {
 
   const imageFitCenterHandler = (croppedImage, originalImage, zoom) => {
     setFitCenterLogo(false);
-    setChangeImage(false);
     setFitCenterLogoEdit(false);
     setCompanyLogoPreview(croppedImage);
     setZoom(zoom);
@@ -195,12 +170,10 @@ function App() {
 
   const onChangeAfterChangeImageEditHandler = () => {
     setFitCenterLogoEdit(false);
-    setChangeImage(true);
   }; 
 
   const onChangeAfterErrorLimitHandler = () => {
     setErrorLimit(false);
-    setChangeImage(true);
   };
 
   return (
@@ -213,16 +186,7 @@ function App() {
         onChange={handleCompanyLogo}
         image={companyLogo}
         preview={companyLogoPreview}
-        // setPreview={setCompanyLogoPreview}
-        // disabled={isMember}
         onEdit={() => setFitCenterLogoEdit(true)}
-        changeImage={changeImage}
-        // canChange={
-        //   (Object.keys(profile).length === 0 &&
-        //     profile.constructor === Object) ||
-        //   isOwner
-        // }
-        setChangeImage={setChangeImage}
       />
       {fitCenterLogo && (
         <Modal width={"auto"} handleClose={() => setFitCenterLogo(false)}>
