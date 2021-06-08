@@ -23,12 +23,14 @@ const Upload = ({
 
   useEffect(() => {
     if (changeImage) {
+      console.log("inputEl.current.click()");
+      alert("inputEl.current.click()")
       inputEl.current.click();
     }
   }, [changeImage]);
 
   const onLoadFileHandler = () => {
-    console.log("load 11");
+    console.log("load 12");
     if (preview) {
       onEdit();
       setChangeImage(false);
