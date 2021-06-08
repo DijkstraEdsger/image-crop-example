@@ -17,6 +17,7 @@ const Upload = ({
   disabled = false,
   changeImage = false,
   onEdit,
+  setChangeImage = () => {}
 }) => {
   const inputEl = useRef(null);
 
@@ -27,9 +28,10 @@ const Upload = ({
   }, [changeImage]);
 
   const onLoadFileHandler = () => {
-    console.log("load 8");
+    console.log("load 11");
     if (preview) {
       onEdit();
+      setChangeImage(false);
     } else {
       inputEl.current.click();
     }
@@ -202,6 +204,7 @@ function App() {
         //     profile.constructor === Object) ||
         //   isOwner
         // }
+        setChangeImage={setChangeImage}
       />
       {fitCenterLogo && (
         <Modal width={"auto"} handleClose={() => setFitCenterLogo(false)}>
