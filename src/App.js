@@ -38,7 +38,7 @@ const Upload = ({
   }, [changeImage]);
 
   const onLoadFileHandler = () => {
-    console.log("load 25");
+    console.log("load 26");
     if (preview) {
       onEdit();
       setChangeImage(false);
@@ -124,6 +124,7 @@ function App() {
     if (e.target.files && e.target.files[0]) {
       // check if the size is less than 5mb
       if ((e.target.files[0].size / 1024 / 1024).toFixed(0) < 5) {
+        setFitCenterLogoEdit(false);
         setFitCenterLogo(true);
 
         return setCompanyLogo(e.target.files[0]);
@@ -253,6 +254,7 @@ function App() {
             onRemove={onRemoveHandler}
             croppedImage={companyLogoPreview}
             onClickChangeImage={onChangeAfterChangeImageEditHandler}
+            onChange={handleCompanyLogo}
           />
         </Modal>
       )}

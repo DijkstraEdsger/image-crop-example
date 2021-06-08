@@ -5,6 +5,8 @@ import QuestionAction from "../questionAction/questionAction";
 
 const ImageFitCenterEdit = (props) => {
   const [removeImage, setRemoveImage] = useState(false);
+  const [companyLogo, setCompanyLogo] = useState();
+  const inputEl = useRef(null);
 
   const onRemoveImageHandler = () => {
     setRemoveImage(true);
@@ -17,6 +19,20 @@ const ImageFitCenterEdit = (props) => {
   const onOkRemove = () => {
     setRemoveImage(false);
     props.onRemove();
+  };
+
+  // const handleCompanyLogo = (e) => {
+  //   if (e.target.files && e.target.files[0]) {
+  //     // check if the size is less than 5mb
+  //     if ((e.target.files[0].size / 1024 / 1024).toFixed(0) < 5) {
+  //       setCompanyLogo(e.target.files[0]);
+  //       props.onSelectFile(e.target.files[0]);
+  //     }
+  //   }
+  // };
+
+  const onLoadFileHandler = () => {
+    inputEl.current.click();
   };
 
   return (
@@ -42,11 +58,20 @@ const ImageFitCenterEdit = (props) => {
             "Button",
             window.innerWidth > 1024 ? "Secondary" : "",
           ].join(" ")}
-          onClick={props.onClickChangeImage}
+          onClick={onLoadFileHandler}
         >
           Change Image
         </button>
       </div>
+      <input
+        ref={inputEl}
+        type="file"
+        hidden
+        onChange={props.onChange}
+        accept="image/x-png,image/gif,image/jpeg,image/jpg"
+        name="image"
+        className="InputImage"
+      />
       {removeImage && (
         <Modal handleClose={() => setRemoveImage(false)}>
           <QuestionAction
