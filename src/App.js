@@ -23,8 +23,14 @@ const Upload = ({
 
   useEffect(() => {
     if (changeImage) {
-      let inpEl = document.getElementsByClassName("inputLoadLogoCreateProfile")[0];
-      inpEl.dispatchEvent(new MouseEvent("click"));
+      // let inpEl = document.getElementsByClassName("inputLoadLogoCreateProfile")[0];
+      const event = new MouseEvent('click', {
+        view: window,
+        bubbles: true,
+        cancelable: true
+      });
+      let inpEl = document.getElementById("inputLoadLogoCreateProfile");
+      inpEl.dispatchEvent(event);
       // inpEl.click();
       // inputEl.current.click();
     }
@@ -32,7 +38,7 @@ const Upload = ({
   }, [changeImage]);
 
   const onLoadFileHandler = () => {
-    console.log("load 24");
+    console.log("load 25");
     if (preview) {
       onEdit();
       setChangeImage(false);
@@ -83,7 +89,7 @@ const Upload = ({
         <input
           ref={inputEl}
           type="file"
-          id={name}
+          id="inputLoadLogoCreateProfile"
           hidden
           onChange={onChange}
           disabled={disabled}
