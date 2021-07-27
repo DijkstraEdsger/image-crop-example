@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import mdLogo from './assets/img/maker-icon-big.png';
 import "./App.scss";
 import React, { useEffect, useRef, useState } from "react";
 import Modal from "./components/modal/modal";
@@ -248,6 +249,7 @@ function App() {
           </div>
         </Modal>
       )}
+      <img src={mdLogo} alt="MD logo"/>
     </div>
   );
 }
